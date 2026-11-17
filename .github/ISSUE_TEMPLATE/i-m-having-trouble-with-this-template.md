@@ -1,5 +1,5 @@
 ---
-name: I'm having trouble with this template
+name: I'm having trouble with this site
 about: Have a problem? It might be a bug! Create a report to help us improve.
 title: ''
 labels: ''
@@ -32,7 +32,7 @@ If applicable, add screenshots to help explain your problem.
  - Device: [e.g. iPhone6]
  - OS: [e.g. iOS8.1]
  - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+ - Version: [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.

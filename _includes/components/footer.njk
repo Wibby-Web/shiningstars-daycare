@@ -1,35 +1,36 @@
 {% set currentLang = page.lang | default("en") %}
+{% set isFr = currentLang == 'fr' %}
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-col brand-col">
       <em class="header-logo">
-        <span class="logo-icon"><i data-lucide="star" style="display:block!important; color: var(--secondary); fill: var(--secondary); padding: 4px"></i></span>{{ metadata.title }}
+        <img src="/static/img/logo.svg" alt="" class="logo-mark" width="28" height="28">{{ metadata.title }}
       </em>
       <p style="margin-top: 1rem;">
-        {% if currentLang == 'fr' %}Excellence en éducation à la petite enfance. Bâtir des bases pour un apprentissage à vie.{% else %}Excellence in early childhood education. Providing a foundation for life-long learning and discovery.{% endif %}
+        {% if isFr %}Excellence en éducation de la petite enfance. Bâtir les bases d'un apprentissage tout au long de la vie.{% else %}Excellence in early childhood education. Providing a foundation for life-long learning and discovery.{% endif %}
       </p>
     </div>
     <div class="footer-col links-col">
-      <h4>{% if currentLang == 'fr' %}Liens Rapides{% else %}Quick Links{% endif %}</h4>
+      <h4>{% if isFr %}Liens rapides{% else %}Quick Links{% endif %}</h4>
       <ul>
-        <li><a href="{{ '/fr/programs/' if currentLang == 'fr'  else '/programs/' }}">{% if currentLang == 'fr' %}Nos Programmes{% else %}Our Programs{% endif %}</a></li>
-        <li><a href="{{'/fr/about/' if currentLang == 'fr'  else '/about/'}}">{% if currentLang == 'fr' %}Notre Équipe{% else %}Staff Members{% endif %}</a></li>
-        <li><a href="{{'/fr/contact/' if currentLang == 'fr'  else '/contact/'}}">{% if currentLang == 'fr' %}Manuel des Parents{% else %}Parent Handbook{% endif %}</a></li>
+        <li><a href="{{ '/fr/programs/' if isFr else '/programs/' }}">{% if isFr %}Nos programmes{% else %}Our Programs{% endif %}</a></li>
+        <li><a href="{{ '/fr/about/' if isFr else '/about/' }}">{% if isFr %}Notre équipe{% else %}Staff Members{% endif %}</a></li>
+        <li><a href="{{ '/fr/contact/' if isFr else '/contact/' }}">{% if isFr %}Inscription{% else %}Enrollment{% endif %}</a></li>
       </ul>
     </div>
     <div class="footer-col contact-col">
-      <h4>{% if currentLang == 'fr' %}Nous Joindre{% else %}Contact Us{% endif %}</h4>
+      <h4>{% if isFr %}Nous joindre{% else %}Contact Us{% endif %}</h4>
       <ul>
-        <li><i data-lucide="map-pin" style="display:inline; vertical-align:sub; margin-right:8px; width: 18px; height: 18px;"></i>123 Sunshine Blvd, Montreal, QC</li>
+        <li><i data-lucide="map-pin" style="display:inline; vertical-align:sub; margin-right:8px; width: 18px; height: 18px;"></i>{% if isFr %}123, boul. Sunshine, Montréal (Québec){% else %}123 Sunshine Blvd, Montreal, QC{% endif %}</li>
         <li><i data-lucide="phone" style="display:inline; vertical-align:sub; margin-right:8px; width: 18px; height: 18px;"></i>(514) 123-4567</li>
         <li><i data-lucide="mail" style="display:inline; vertical-align:sub; margin-right:8px; width: 18px; height: 18px;"></i>hello@shiningstars-example.com</li>
       </ul>
     </div>
     <div class="footer-col location-col">
-      <h4>{% if currentLang == 'fr' %}Emplacement{% else %}Location{% endif %}</h4>
+      <h4>{% if isFr %}Emplacement{% else %}Location{% endif %}</h4>
       <div class="map-container" style="width: 100%; height: 200px; border-radius: var(--border-radius-md); overflow: hidden;">
         <iframe 
-          src="https://maps.google.com/maps?q=Montreal,%20QC&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+          src="https://maps.google.com/maps?q={% if isFr %}Montr%C3%A9al{% else %}Montreal{% endif %},%20QC&t=&z=13&ie=UTF8&iwloc=&output=embed"
           width="100%" 
           height="100%" 
           style="border:0;" 
@@ -41,6 +42,6 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2024 {{ metadata.title }}. {% if currentLang == 'fr' %}Tous droits réservés.{% else %}All rights reserved.{% endif %}</p>
+    <p>&copy; {% currentYear %} {{ metadata.title }}. {% if isFr %}Tous droits réservés.{% else %}All rights reserved.{% endif %}</p>
   </div>
 </footer>

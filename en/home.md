@@ -1,6 +1,7 @@
 ---
 layout: layouts/home.njk
 title: Welcome
+metaDescription: A nurturing early learning center where children learn, play, and grow with confidence through a specialized early development curriculum.
 date: 2024-01-01T00:00:00.000Z
 permalink: /
 eleventyNavigation:
@@ -22,7 +23,7 @@ eleventyNavigation:
 
 <section class="philosophy-section">
   <div class="philosophy-image">
-    <img src="./static/img/happy-teacher-listening-her-students.jpg" alt="Teacher listening to students" class="illustration-placeholder-img">
+    <img src="/static/img/gallery/storytime.jpg" width="1200" height="800" alt="Teacher listening to students" class="illustration-placeholder-img" loading="lazy" decoding="async">
     <div class="years-badge"><strong>15+ Years</strong><br>Of dedicated early childhood excellence</div>
   </div>
   <div class="philosophy-content">
@@ -140,6 +141,6 @@ eleventyNavigation:
   <p>Tours are available Monday through Friday from 9:00 AM to 4:00 PM. Book your spot today!</p>
   <div class="cta-buttons">
     <a href="/contact/" class="btn-primary">Book Your Tour Now</a>
-    <a href="/contact/" class="btn-secondary">Download Brochure</a>
+    <a href="/contact/" class="btn-secondary">Request the Brochure</a>
   </div>
 </section>

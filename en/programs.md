@@ -16,12 +16,15 @@ eleventyNavigation:
 
 <div id="infant-care" class="program-row">
   <div class="program-image">
-    <img src="/static/img/infant-illustration.png" alt="Sleeping infant illustration">
+    <img src="/static/img/opt/infant-illustration-1600.jpg"
+         srcset="/static/img/opt/infant-illustration-800.jpg 800w, /static/img/opt/infant-illustration-1600.jpg 1600w"
+         sizes="(min-width: 1200px) 570px, (min-width: 768px) 50vw, 100vw"
+         width="1600" height="1067" alt="A baby exploring indoors" loading="lazy" decoding="async">
   </div>
   <div class="program-content">
     <span class="pill-badge">6 Weeks - 18 Months</span>
     <h2>Infant Care</h2>
-    <p>Our infant program focus on building secure attachments through responsive care and sensory-rich environments. We provide a gentle transition from home to school.</p>
+    <p>Our infant program focuses on building secure attachments through responsive care and sensory-rich environments. We provide a gentle transition from home to school.</p>
 
 <p style="font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--secondary);">Key Learning Milestones:</p>
 <ul class="learning-list">
@@ -35,7 +38,10 @@ eleventyNavigation:
 
 <div id="toddler-program" class="program-row">
   <div class="program-image">
-    <img src="/static/img/toddler-illustration.png" alt="Toddlers playing with blocks illustration">
+    <img src="/static/img/opt/toddler-illustration-1600.jpg"
+         srcset="/static/img/opt/toddler-illustration-800.jpg 800w, /static/img/opt/toddler-illustration-1600.jpg 1600w"
+         sizes="(min-width: 1200px) 570px, (min-width: 768px) 50vw, 100vw"
+         width="1600" height="1061" alt="Toddlers playing together" loading="lazy" decoding="async">
   </div>
   <div class="program-content">
     <span class="pill-badge">18 Months - 3 Years</span>
@@ -54,7 +60,10 @@ eleventyNavigation:
 
 <div id="pre-k" class="program-row">
   <div class="program-image">
-    <img src="/static/img/preschool-illustration.png" alt="Pre-K learning illustration">
+    <img src="/static/img/opt/preschool-illustration-1600.jpg"
+         srcset="/static/img/opt/preschool-illustration-800.jpg 800w, /static/img/opt/preschool-illustration-1600.jpg 1600w"
+         sizes="(min-width: 1200px) 570px, (min-width: 768px) 50vw, 100vw"
+         width="1600" height="1065" alt="Pre-K children learning together" loading="lazy" decoding="async">
   </div>
   <div class="program-content">
     <span class="pill-badge">3 - 5 Years</span>
@@ -88,8 +97,8 @@ eleventyNavigation:
     </div>
     <div class="enrichment-card">
       <div class="enrichment-icon"><i data-lucide="flask-conical" style="width: 24px; height: 24px;"></i></div>
-      <h4>Little STEM</h4>
-      <p>Early science, technology, engineering, and math concepts.</p>
+      <h4>Little STEAM</h4>
+      <p>Early science, technology, engineering, arts, and math concepts.</p>
     </div>
   </div>
 </div>
@@ -99,6 +108,6 @@ eleventyNavigation:
   <p>Take the first step toward a bright future. Schedule a tour to visit our facility and meet our dedicated teachers.</p>
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="/contact/" class="btn-primary">Schedule a Tour</a>
-    <a href="#" class="btn-secondary">Download Brochure</a>
+    <a href="/contact/" class="btn-secondary">Request the Brochure</a>
   </div>
 </div>

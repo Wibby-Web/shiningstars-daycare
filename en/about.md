@@ -37,7 +37,11 @@ eleventyNavigation:
     </div>
   </div>
   <div class="story-image">
-    <img src="/static/img/teacher-reading.png" alt="Teacher reading a book to children">
+    <img src="/static/img/opt/teacher-reading-1600.jpg"
+         srcset="/static/img/opt/teacher-reading-800.jpg 800w, /static/img/opt/teacher-reading-1600.jpg 1600w"
+         sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
+         width="1600" height="1067"
+         alt="Teacher talking with a child" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -48,7 +52,7 @@ eleventyNavigation:
   <div class="educator-grid">
     <div class="educator-card">
       <div class="educator-portrait">
-        <img src="/static/img/sarah-johnson.png" alt="Sarah Johnson - Director">
+        <img src="/static/img/opt/sarah-johnson-240.jpg" width="240" height="240" alt="Sarah Johnson - Director" loading="lazy" decoding="async">
       </div>
       <h3>Sarah Johnson</h3>
       <span class="educator-title">Director</span>
@@ -57,7 +61,7 @@ eleventyNavigation:
     
 <div class="educator-card">
       <div class="educator-portrait">
-        <img src="/static/img/david-chen.png" alt="David Chen - Lead Teacher">
+        <img src="/static/img/opt/david-chen-240.jpg" width="240" height="240" alt="David Chen - Lead Teacher" loading="lazy" decoding="async">
       </div>
       <h3>David Chen</h3>
       <span class="educator-title">Lead Teacher</span>
@@ -66,7 +70,7 @@ eleventyNavigation:
     
 <div class="educator-card">
       <div class="educator-portrait">
-        <img src="/static/img/elena-rodriguez.png" alt="Elena Rodriguez - Infant Care Specialist">
+        <img src="/static/img/opt/elena-rodriguez-240.jpg" width="240" height="240" alt="Elena Rodriguez - Infant Care Specialist" loading="lazy" decoding="async">
       </div>
       <h3>Elena Rodriguez</h3>
       <span class="educator-title">Infant Care Specialist</span>
@@ -75,7 +79,7 @@ eleventyNavigation:
     
 <div class="educator-card">
       <div class="educator-portrait">
-        <img src="/static/img/marcus-thompson.png" alt="Marcus Thompson - Toddler Educator">
+        <img src="/static/img/opt/marcus-thompson-240.jpg" width="240" height="240" alt="Marcus Thompson - Toddler Educator" loading="lazy" decoding="async">
       </div>
       <h3>Marcus Thompson</h3>
       <span class="educator-title">Toddler Educator</span>

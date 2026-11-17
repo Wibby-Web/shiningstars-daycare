@@ -54,6 +54,9 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  // Current year for the footer copyright
+  eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -82,8 +85,37 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // Prefix root-relative URLs when the site is served from a subdirectory.
+  // GitHub Pages project sites live at https://<user>.github.io/<repo>/, so the
+  // deploy workflow sets SITE_BASE_PATH=/<repo>/. Netlify and local builds leave
+  // it unset and keep URLs at the domain root.
+  const siteBasePath = (process.env.SITE_BASE_PATH || "").replace(/\/+$/, "");
+
+  eleventyConfig.addTransform("siteBasePath", function(content, outputPath) {
+    if (!siteBasePath || !outputPath || !outputPath.endsWith(".html")) {
+      return content;
+    }
+
+    const prefix = url => (url.startsWith("/") && !url.startsWith("//")) ? siteBasePath + url : url;
+
+    return content
+      .replace(/(\b(?:href|src|poster|action)=")(\/(?!\/)[^"]*)"/g,
+        (match, attribute, url) => `${attribute}${prefix(url)}"`)
+      .replace(/(\bsrcset=")([^"]*)"/g, (match, attribute, value) => {
+        const candidates = value.split(",").map(candidate => {
+          const [url, ...descriptor] = candidate.trim().split(/\s+/);
+          return [prefix(url), ...descriptor].join(" ");
+        });
+        return `${attribute}${candidates.join(", ")}"`;
+      })
+      .replace(/(url\(\s*['"]?)(\/(?!\/)[^'")]*)/g,
+        (match, start, url) => `${start}${prefix(url)}`);
+  });
+
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("favicon.svg");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin/");
   // We additionally output a copy of our CSS for use in Decap CMS previews

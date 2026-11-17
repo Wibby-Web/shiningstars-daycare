@@ -1,10 +1,9 @@
 ---
 name: I have a question
-about: General education e.g. “How do I do this?” or “Can this template do this?”
+about: General question about the ShiningStars site, e.g. "How do I update a page?"
 title: ''
-labels: question, education
+labels: question
 assignees: ''
 
 ---
-
 

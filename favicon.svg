@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="ShiningStars">
+  <rect width="48" height="48" rx="10" fill="#facc15"/>
+  <path d="M24 9.6 28.45 18.61 38.4 20.07 31.2 27.08 32.9 36.99 24 32.31 15.1 36.99 16.8 27.08 9.6 20.07 19.55 18.61Z"
+        fill="#1f2937" stroke="#1f2937" stroke-width="1.4" stroke-linejoin="round"/>
+</svg>
